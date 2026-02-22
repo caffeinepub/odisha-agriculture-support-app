@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        /* Sophisticated blue-purple palette with elegant accents */
+        --background: 0.99 0.005 260;
+        --foreground: 0.20 0.025 260;
+        --card: 1 0 0;
+        --card-foreground: 0.20 0.025 260;
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0.025 260;
+        --primary: 0.55 0.20 260;
+        --primary-foreground: 0.99 0.005 260;
+        --secondary: 0.65 0.18 290;
+        --secondary-foreground: 0.99 0.005 260;
+        --muted: 0.96 0.01 260;
+        --muted-foreground: 0.50 0.015 260;
+        --accent: 0.70 0.22 220;
+        --accent-foreground: 0.99 0.005 260;
+        --destructive: 0.60 0.24 25;
+        --destructive-foreground: 0.99 0.005 260;
+        --border: 0.92 0.01 260;
+        --input: 0.92 0.01 260;
+        --ring: 0.55 0.20 260;
+        --chart-1: 0.55 0.20 260;
+        --chart-2: 0.65 0.18 290;
+        --chart-3: 0.70 0.22 220;
+        --chart-4: 0.60 0.16 180;
+        --chart-5: 0.68 0.20 310;
+        /* Warm amber for emergency emphasis */
+        --warning: 0.72 0.20 50;
+        --warning-foreground: 0.20 0.025 260;
+        --success: 0.65 0.18 150;
+    }
+
+    .dark {
+        --background: 0.15 0.025 260;
+        --foreground: 0.96 0.01 260;
+        --card: 0.18 0.025 260;
+        --card-foreground: 0.96 0.01 260;
+        --popover: 0.18 0.025 260;
+        --popover-foreground: 0.96 0.01 260;
+        --primary: 0.68 0.22 260;
+        --primary-foreground: 0.15 0.025 260;
+        --secondary: 0.72 0.20 290;
+        --secondary-foreground: 0.15 0.025 260;
+        --muted: 0.25 0.025 260;
+        --muted-foreground: 0.65 0.015 260;
+        --accent: 0.75 0.24 220;
+        --accent-foreground: 0.15 0.025 260;
+        --destructive: 0.65 0.26 25;
+        --destructive-foreground: 0.96 0.01 260;
+        --border: 0.28 0.025 260;
+        --input: 0.28 0.025 260;
+        --ring: 0.68 0.22 260;
+        --chart-1: 0.68 0.22 260;
+        --chart-2: 0.72 0.20 290;
+        --chart-3: 0.75 0.24 220;
+        --chart-4: 0.65 0.18 180;
+        --chart-5: 0.72 0.22 310;
+        --warning: 0.75 0.22 50;
+        --warning-foreground: 0.96 0.01 260;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+@layer components {
+    .hero-section {
+        background-image: linear-gradient(135deg, rgba(88, 28, 135, 0.85), rgba(59, 130, 246, 0.75)), url('/assets/generated/hero-farmland.dim_1920x1080.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@layer utilities {
+    .shadow-warm {
+        box-shadow: 0 2px 8px -2px oklch(var(--warning) / 0.12), 0 4px 16px -4px oklch(var(--warning) / 0.08);
+    }
+    .shadow-warm-md {
+        box-shadow: 0 4px 12px -2px oklch(var(--warning) / 0.15), 0 8px 24px -4px oklch(var(--warning) / 0.10);
+    }
+    .shadow-warm-lg {
+        box-shadow: 0 8px 24px -4px oklch(var(--warning) / 0.20), 0 12px 32px -8px oklch(var(--warning) / 0.15);
+    }
+    .shadow-elegant {
+        box-shadow: 0 2px 12px -2px oklch(var(--primary) / 0.08), 0 4px 20px -4px oklch(var(--primary) / 0.05);
+    }
+    .shadow-elegant-md {
+        box-shadow: 0 4px 16px -2px oklch(var(--primary) / 0.10), 0 8px 28px -4px oklch(var(--primary) / 0.07);
+    }
+    .shadow-elegant-lg {
+        box-shadow: 0 8px 28px -4px oklch(var(--primary) / 0.12), 0 12px 36px -8px oklch(var(--primary) / 0.09);
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 0.5s ease-out;
+    }
+}

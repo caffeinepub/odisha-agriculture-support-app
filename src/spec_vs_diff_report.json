@@ -1,0 +1,14 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T07:28:59.881Z",
+  "summary": "The diff fully implements REQ-1. The HomePage.tsx file shows the WhatsApp phone number changed from the old number to 9040117361, the wa.me URL format is preserved (https://wa.me/9040117361), and the emergency support message template remains unchanged ('I need emergency farming support from Odisha Agriculture Support'). No missing requirements or hallucinated features detected.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.95,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/pages/HomePage.tsx",
+    "project_state.json"
+  ]
+}

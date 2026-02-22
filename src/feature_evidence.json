@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-whatsapp-phone-number-from-91-98765-43210-to-9040117361-in-the-homepage-component-ensuring-the-wa-me-url-format-is-maintained",
+      "featureTitle": "Replace the WhatsApp phone number from +91 98765 43210 to 9040117361 in the HomePage component, ensuring the wa.me URL format is maintained",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

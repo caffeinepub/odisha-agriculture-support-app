@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update WhatsApp contact number",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace the WhatsApp phone number from +91 98765 43210 to 9040117361 in the HomePage component, ensuring the wa.me URL format is maintained",
+      "acceptanceCriteria": [
+        "The WhatsApp link uses phone number 9040117361",
+        "The wa.me URL format is preserved",
+        "The emergency support message template remains unchanged"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Update the WhatsApp phone number in the wa.me URL from +91 98765 43210 to 9040117361. Locate the WhatsApp link section (likely in a Card or Button component) and modify only the phone number portion of the URL while preserving the wa.me format and any pre-filled message parameters. Ensure the updated URL follows the pattern: https://wa.me/9040117361?text=<encoded-message>"
+        }
+      ]
+    }
+  ]
+}
